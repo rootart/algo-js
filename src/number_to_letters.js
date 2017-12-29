@@ -33,39 +33,28 @@ function generateHeadAndTail(arr) {
 
 }
 
-// console.log(generateHeadAndTail(
-//   [[], [2, 3]]
-// ))
 
-
-
-function soluation(arr) {
+function solution(arr) {
     if (arr.length === 0) {
         return [];
     }
 
-    var q = [[[], []]];
+    var q = [[[], arr], ];
 
     var result = [];
     while (q.length > 0) {
-        console.log('values in the q', q);
+        // console.log('values in the q', q);
         var firstFromQ = q.pop();
-        console.log('array for processing', firstFromQ);
+        // console.log('array for processing', firstFromQ);
         var head = firstFromQ[0];
         var tail = firstFromQ[1];
         var pairs;
-
-        if (tail.length === 0 && head.length === 0) {
-            pairs = generateHeadAndTail([[], arr]);
-            console.log('calculated initial pairs', pairs);
-            pairs.map((pair) => q.push(pair));
-        }
 
         if (tail.length === 0 && head.length > 0){
             result.push(head);
         } else if (tail.length > 0) {
             pairs = generateHeadAndTail([head, tail]);
-            console.log('another pairs ', pairs);
+            // console.log('another pairs ', pairs);
             pairs.map((pair) => q.push(pair));
         }
     }
@@ -85,4 +74,5 @@ function translateToLetters(arrayOfSolutions) {
         }).join('');
     });
 }
-console.log(soluation([1, 2, 7, 8, 1, 1, 0, 0]));
+
+export { generateHeadAndTail, solution, translateToLetters };

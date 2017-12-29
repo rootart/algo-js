@@ -1,0 +1,15 @@
+{
+  "name": "algo-js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:rootart/algo-js.git",
+  "author": "Vasyl Dizhak <vasyl.dizhak@moneypark.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "jest": "^22.0.4"
+  }
+}
