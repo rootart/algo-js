@@ -24,5 +24,10 @@ module.exports = {
             "error",
             "always"
         ]
+    },
+    "globals": {
+        "describe": false,
+        "it": false,
+        "expect": false
     }
 };
