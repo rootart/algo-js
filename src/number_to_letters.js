@@ -75,4 +75,5 @@ function translateToLetters(arrayOfSolutions) {
     });
 }
 
+
 export { generateHeadAndTail, solution, translateToLetters };
